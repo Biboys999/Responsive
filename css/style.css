@@ -1,4 +1,4 @@
-*{ margin:0;}
+*{ margin:0; padding: 0;}
 section.container, ul#nav {
     display: flex;
 }
@@ -16,10 +16,14 @@ header {
 }
 #nav{
     list-style: none;
-    width: 50vw;
+    height: 72px;
+    justify-content: flex-start;
+    align-items: center;
 }
-#nav li, #nav{
-    padding: 20px;
+#nav li{
+    padding: 0px;
+    margin: 0 5%;
+    width: 100px;
 }
 a , #psd , #premium{
     color: #EBEBEB;
@@ -91,6 +95,23 @@ a , #psd , #premium{
 /*partie responsive*/
 
 @media screen and (max-width: 640px) {
+    #nav{
+        padding: 0px;
+        margin: 0;
+        width: 100%;
+        justify-content: space-around;
+    }
+    #nav li{
+        padding: 0px;
+        margin: 0;
+        text-align: center;
+    }
+    li a{
+        font-size: 14px;
+    }
+    #hidden{
+        display: none;
+    }
     #psd{
         flex-wrap: nowrap;
         width: 100%;
@@ -112,10 +133,9 @@ a , #psd , #premium{
         height: 100vw;
     }
     #uni {
-        height: 100vh;
+        height: 100%;
     }
     #uni p {
         width: 100%;
     }
-    
 }
